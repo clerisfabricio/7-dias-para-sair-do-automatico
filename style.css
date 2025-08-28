@@ -1,0 +1,479 @@
+/* Estilos Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /* Fallback ou para outros textos */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); /* Fallback ou para outros títulos */
+
+/* Assumindo que as fontes Ignazio e Esboço de Ignazio são webfonts e podem ser importadas. Caso contrário, seria necessário um método de inclusão diferente. */
+/* @import url('URL_DA_FONTE_IGNAZIO_REGULAR'); */
+/* @import url('URL_DA_FONTE_IGNAZIO_ITALICO'); */
+/* @import url('URL_DA_FONTE_ESBOCO_DE_IGNAZIO'); */
+/* @import url('URL_DA_FONTE_ESBOCO_DE_IGNAZIO_ITALICO'); */
+
+body {
+    font-family: 'Ignazio Regular', 'Open Sans', sans-serif; /* Fonte principal */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #CFE0BC; /* Cor de fundo suave da nova paleta */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Esboço de Ignazio', 'Montserrat', sans-serif; /* Fonte para títulos */
+    color: #63783D; /* Cor escura para títulos da nova paleta */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #7FA653; /* Cor para CTA da nova paleta */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #99CD85;
+}
+
+/* Seção Hero */
+.hero-section {
+    background-image: url("hero_image.jpg"); /* Nova imagem hero */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro para legibilidade */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #eee;
+}
+
+/* Seções de Conteúdo */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.for-whom-section {
+    background-color: #CFE0BC; /* Cor da nova paleta */
+}
+
+.what-you-get-section {
+    background-color: #fff;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-item {
+    flex-basis: calc(50% - 30px); /* 2 colunas em desktop */
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.benefit-item .icon {
+    font-size: 2em;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.benefit-item p {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin: 0;
+}
+
+.social-proof-section {
+    background-color: #CFE0BC;
+}
+
+.testimonial {
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.testimonial blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial .author {
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.faq-section {
+    background-color: #fff;
+}
+
+.faq-item {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.faq-item h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    cursor: pointer; /* Para indicar que pode ser clicável se houver JS para expandir */
+    text-align: left;
+}
+
+.faq-item p {
+    font-size: 0.95em;
+    color: #666;
+    text-align: left;
+}
+
+/* CTA Final */
+.cta-final-section {
+    background-color: #63783D; /* Cor da nova paleta */
+    color: #fff;
+    padding: 80px 20px;
+}
+
+.cta-final-section h2 {
+    color: #fff;
+}
+
+.cta-final-section p {
+    color: #eee;
+    margin-bottom: 30px;
+}
+
+.signup-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup-form input[type="email"],
+.signup-form input[type="text"] {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.signup-form .button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    background-color: #7FA653; /* Cor da nova paleta */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .benefits-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-item {
+        flex-basis: 90%;
+    }
+
+    .signup-form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-section {
+        padding: 60px 15px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+.cta-final-section .price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #99CD85; /* Cor da nova paleta */
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Seção de Oferta */
+.offer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.price-box {
+    background: linear-gradient(135deg, #99CD85, #7FA653);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.original-price {
+    font-size: 1.2em;
+    text-decoration: line-through;
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.current-price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.discount-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: #ff4444;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 5px 15px rgba(255,68,68,0.4);
+}
+
+.urgency-text {
+    margin: 20px 0;
+}
+
+.urgency-text p {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.urgency-text p:first-child {
+    font-weight: bold;
+    color: #99CD85;
+}
+
+.button-cta {
+    background: linear-gradient(135deg, #7FA653, #99CD85);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(127,166,83,0.4);
+    margin: 20px 0;
+}
+
+.button-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(127,166,83,0.6);
+}
+
+.guarantee {
+    margin-top: 20px;
+}
+
+.guarantee p {
+    color: #99CD85;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Popup Modal */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-popup:hover {
+    color: #333;
+}
+
+.popup-content h3 {
+    color: #63783D;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.popup-content p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup-form input {
+    padding: 15px;
+    border: 2px solid #CFE0BC;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.popup-form input:focus {
+    outline: none;
+    border-color: #7FA653;
+}
+
+.popup-form .button {
+    background-color: #7FA653;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-form .button:hover {
+    background-color: #99CD85;
+}
+
+/* Responsividade para popup */
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .current-price {
+        font-size: 2em;
+    }
+    
+    .button-cta {
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+}
+
